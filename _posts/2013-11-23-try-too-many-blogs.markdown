@@ -1,6 +1,7 @@
 ---
 title: On the road
 layout: post
+guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d80
 tags:
   - 生活
   - 工作
