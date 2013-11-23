@@ -19,16 +19,16 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 
 ### \_config.yml 需要改：
 
-<pre><code> markdown: kramdown </code></pre>
+> markdown: kramdown
 
 不改就坑爹，rdiscount比他老一点，其他更老，仔细看，欢迎纠正。
 
 ### post.html 需要改：
 
-<pre><code><script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
     tex2jax: {
-    inlineMath: [['',''], ['\\(','\\)']],
+    inlineMath: [['$','$'], ['\\(','\\)']],
     processEscapes: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     },
@@ -58,16 +58,15 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
     });
     </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</code></pre>
 
 ### style.css需要改：
 
-```code.has-jax {
-font: inherit; 
-font-size: 100%; 
-background: inherit; 
-border: inherit;}
-```
+    code.has-jax {
+    font: inherit; 
+    font-size: 100%; 
+    background: inherit; 
+    border: inherit;}
+
 
 ### 其他注意事项
 
