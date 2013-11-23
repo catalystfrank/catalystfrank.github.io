@@ -54,7 +54,9 @@ When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
 $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
 
-$f_1(x) = x_3 - 1 = 0 - 1 = -1$
+$$f_1(x) = x_3 - 1 = 0 - 1 = -1 x = {-b \pm \sqrt{b^2-4ac} \over 2a} \label{eq:sample}$$
+
+$$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
 \(f_1(x) = x_3 - 1 = 0 - 1 = -1\)
 
