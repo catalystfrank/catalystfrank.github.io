@@ -3,6 +3,6 @@ title: 404
 layout: page
 ---
 
-Either you or Weiyang got a head stuck. Or both. :(
+Nothing found :(
 
-[Look around!](/index.html)
+But you still can have a [look around](/index.html)
