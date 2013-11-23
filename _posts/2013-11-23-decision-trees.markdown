@@ -57,9 +57,9 @@ $f_1(x) = x_3 - 1 = 0 - 1 = -1$
 
 $$\label{s1}f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
-\(\label{s2}f_1(x) = x_3 - 1 = 0 - 1 = -1\)
+\(f_1(x) = x_3 - 1 = 0 - 1 = -1\)
 
-\[\label{s3}f_1(x) = x_3 - 1 = 0 - 1 = -1\]
+\[f_1(x) = x_3 - 1 = 0 - 1 = -1\]
 
 \begin{equation}\label{s4}x = {-b \pm \sqrt{b^2-4ac} \over 2a}\end{equation}
 
