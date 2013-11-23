@@ -52,8 +52,10 @@ tags:
 
 ##测试(预测)
 
-$$\label{id} f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) $$
+\[ \label{id} f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \]
+
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
+
 $$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
