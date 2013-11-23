@@ -25,15 +25,14 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 
 ### post.html 需要改：
 
-```
-<br />  <script type="text/x-mathjax-config">
-<br />  	MathJax.Hub.Config({
-<br />  	tex2jax: {
-    inlineMath: [['',''], ['\\(','\\)']],
+<pre><code><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+   tex2jax: {
+   inlineMath: [['',''], ['\\(','\\)']],
    processEscapes: true,
    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
    },
- 	TeX: {
+ 	 TeX: {
              equationNumbers: {
                  autoNumber: ["AMS"],
                  useLabelIds: true
