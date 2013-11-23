@@ -49,6 +49,7 @@ tags:
 ##测试(预测)
 
 \(f^{*} = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}))\)
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
 
