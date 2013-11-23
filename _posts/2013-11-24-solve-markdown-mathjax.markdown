@@ -49,16 +49,16 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
                  automatic: true
              }
          }
- 	});
- 	MathJax.Hub.Queue(function() {
-     var all = MathJax.Hub.getAllJax(), i;
-     for(i = 0; i < all.length; i += 1) {
-         all[i].SourceElement().parentNode.className += ' has-jax';
-     }
- 	});
- 	</script>
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</code><pre>
+</code></pre>
 
 ### style.css需要改：
 
