@@ -1,0 +1,8 @@
+---
+title: 404
+layout: page
+---
+
+Either you or Weiyang got a head stuck. Or both. :(
+
+[Look around!](/index.html)
