@@ -52,7 +52,7 @@ tags:
 
 ##测试(预测)
 
-\label{id}[ f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \]
+\( f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \)
 
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
 
