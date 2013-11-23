@@ -2,7 +2,7 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
 name: "[Catalyzing...25%]"
-markdown: rdiscount
+markdown: kramdown
 
 author: "frankwang"
 atom-baseurl: "http://weiyangthecatalyst.name"
