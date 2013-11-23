@@ -7,7 +7,9 @@ tags:
 ---
 
 
-##今天效率超高，Github自带Jekyll后台解析markdown，等着就行了，但是和mathjax各种冲突，终于找到解决方案！
+## 高效建站，玩转github+markdown+mathjax
+
+今天效率超高，Github自带Jekyll后台解析markdown，等着就行了，但是和mathjax各种冲突，终于找到解决方案！
 
 我用的模板是别人Jekyll Boostrap的，暂时没mac没linux没钱怎么办？抄啊！
 
