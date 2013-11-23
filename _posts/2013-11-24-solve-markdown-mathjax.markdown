@@ -26,10 +26,10 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 ### post.html 需要改：
 
 <code>
- <script type="text/x-mathjax-config">
- 	MathJax.Hub.Config({
- 	tex2jax: {
-   inlineMath: [['$','$'], ['\\(','\\)']],
+<br /> <script type="text/x-mathjax-config">
+<br /> 	MathJax.Hub.Config({
+<br /> 	tex2jax: {
+<br />   inlineMath: [['$','$'], ['\\(','\\)']],
    processEscapes: true,
    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
    },
