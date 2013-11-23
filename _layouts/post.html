@@ -20,7 +20,7 @@ layout: default
   </section>
   <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+tex2jax: {skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']},
 TeX: {
             equationNumbers: {
                 autoNumber: ["AMS"],
@@ -39,6 +39,13 @@ TeX: {
             }
         }
 });
+MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
 </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <section class="post">
