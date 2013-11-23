@@ -52,9 +52,9 @@ tags:
 
 ##测试(预测)
 
-<img src="http://latex.codecogs.com/gif.latex?\sqrt{a^2+b^2}" title="f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) )" />
-
-\begin{equation} f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \end{equation}
+\( f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \)
+$f_1(x) = x_3 - 1 = 0 - 1 = -1$
+$$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
 进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
