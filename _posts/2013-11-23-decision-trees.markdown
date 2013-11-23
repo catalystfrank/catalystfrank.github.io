@@ -54,10 +54,10 @@ tags:
 
 <img src="http://latex.codecogs.com/gif.latex?\sqrt{a^2+b^2}" title="f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) )" />
 
-f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) )
+\begin{equation} f^* = \underset{f}\text{argmin} ( \sum_{b=1}^{B} L(\mathcal{X}_{b}, \mathcal{Y}_{b}) ) \end{equation}
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
-进入根节点, 分支函数 <math> f_1(x) = x_3 - 1 = 0 - 1 = -1 </math> 小于0， 进入左分支
+进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
 分支函数 <math> f_2(x) = x_1 - x_2 + 1 = 3 - 2 + 1 = 2 </math> 大于0, 进入右分支
 分支函数 <math> f_4(x) = x_2 + 1 = 2 + 1 = 3 </math> 大于0, 进入右分支, 已经到达叶节点
 假设是三分类问题, 该叶节点上所有类别的后验概率是 (0.1, 0.7, 0.2), 那么该决策树预测输入样本属于第二类.
