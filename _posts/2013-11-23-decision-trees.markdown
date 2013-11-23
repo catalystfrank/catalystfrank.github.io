@@ -54,7 +54,7 @@ When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
 $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
 
-$$f_1(x) = x_3 - 1 = 0 - 1 = -1 x = {-b \pm \sqrt{b^2-4ac} \over 2a} \label{eq:sample}$$
+$$f_1(x) = x_3 - 1 = 0 - 1 = -1 x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 $$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
@@ -67,7 +67,7 @@ $$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
   \label{eq:sample2}
 \end{equation}
 
-下图提供了一个简单的例子$\ref{eq:sample}$说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
+下图提供了一个简单的例子$\ref{eq:sample2}$说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
 进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
 分支函数 <math> f_2(x) = x_1 - x_2 + 1 = 3 - 2 + 1 = 2 </math> 大于0, 进入右分支
 分支函数 <math> f_4(x) = x_2 + 1 = 2 + 1 = 3 </math> 大于0, 进入右分支, 已经到达叶节点
