@@ -60,6 +60,7 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </code>
+
 ### style.css需要改：
 
 <code>
