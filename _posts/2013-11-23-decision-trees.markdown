@@ -51,7 +51,7 @@ tags:
 
 When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are 
 
-$\label{sss} x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
 
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
 
@@ -60,6 +60,8 @@ $$\label{s1}f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 \(\label{s2}f_1(x) = x_3 - 1 = 0 - 1 = -1\)
 
 \[\label{s3}f_1(x) = x_3 - 1 = 0 - 1 = -1\]
+
+\begin{equation}\label{s4}x = {-b \pm \sqrt{b^2-4ac} \over 2a}\end{equation}
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
 进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
