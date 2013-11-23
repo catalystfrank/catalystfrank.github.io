@@ -26,38 +26,38 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 ### post.html 需要改：
 
 `
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-		tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']],
-		processEscapes: true,
-		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-		},
-		TeX: {
-		          equationNumbers: {
-		              autoNumber: ["AMS"],
-		              useLabelIds: true
-		          }
-		      },
-		      "HTML-CSS": {
-		          linebreaks: {
-		              automatic: true
-		          },
-		          scale: 85
-		      },
-		      SVG: {
-		          linebreaks: {
-		              automatic: true
-		          }
-		      }
-		});
-		MathJax.Hub.Queue(function() {
-		  var all = MathJax.Hub.getAllJax(), i;
-		  for(i = 0; i < all.length; i += 1) {
-		      all[i].SourceElement().parentNode.className += ' has-jax';
-		  }
-		});
-		</script>
+		<script type="text/x-mathjax-config">																					\n
+		MathJax.Hub.Config({                                                          \n
+		tex2jax: {                                                                    \n
+		inlineMath: [['$','$'], ['\\(','\\)']],                                       \n
+		processEscapes: true,                                                         \n
+		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']                  \n
+		},                                                                            \n
+		TeX: {                                                                        \n
+		          equationNumbers: {                                                  \n
+		              autoNumber: ["AMS"],                                            \n
+		              useLabelIds: true                                               \n
+		          }                                                                   \n
+		      },                                                                      \n
+		      "HTML-CSS": {                                                           \n
+		          linebreaks: {                                                       \n
+		              automatic: true                                                 \n
+		          },                                                                  \n
+		          scale: 85                                                           \n
+		      },                                                                      \n
+		      SVG: {                                                                  \n
+		          linebreaks: {                                                       \n
+		              automatic: true                                                 \n
+		          }                                                                   \n
+		      }                                                                       \n
+		});                                                                           \n
+		MathJax.Hub.Queue(function() {                                                \n
+		  var all = MathJax.Hub.getAllJax(), i;                                       \n
+		  for(i = 0; i < all.length; i += 1) {                                        \n
+		      all[i].SourceElement().parentNode.className += ' has-jax';              \n
+		  }                                                                           \n
+		});                                                                           \n
+		</script>                                                                     \n
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 `
 
