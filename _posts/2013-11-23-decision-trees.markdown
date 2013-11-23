@@ -52,19 +52,18 @@ tags:
 
 When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are 
 
-When `a \ne 0`, there are two solutions to `ax^2 + bx + c = 0` and they are 
-
 $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
 
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
-
-$$\label{s1}f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
 \(f_1(x) = x_3 - 1 = 0 - 1 = -1\)
 
 \[f_1(x) = x_3 - 1 = 0 - 1 = -1\]
 
-`x = {-b \pm \sqrt{b^2-4ac} \over 2a}`
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}
+\end{equation}
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
 进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
