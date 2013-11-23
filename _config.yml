@@ -1,12 +1,12 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
-name: "[shutter release]"
+name: "[Catalyzing...25%]"
 markdown: rdiscount
 
-author: "wayne"
-atom-baseurl: "http://lhzhang.com"
-disqus: "gopherwood"
+author: "frankwang"
+atom-baseurl: "http://weiyangthecatalyst.name"
+disqus: "yipansansha"
 
 navigations:
   - title: Archive
@@ -20,7 +20,7 @@ navigations:
     href: /about.html
   - title: Gallery
     class: fa fa-film
-    href: http://foto.lhzhang.com
+    href: /gallery.html
   - title: Blogroll
     class: fa fa-link
     href: /links.html

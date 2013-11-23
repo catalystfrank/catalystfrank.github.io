@@ -7,12 +7,12 @@ A
 
 > Vocalist? | Coder? | Machine Learner? | Workaholic.
 
-mail 
+E-mail 
 
-> echo srvpqxfbyqfvpdtkbjwt | tr yxwvtsrqpkjfdb zuonmlihgeca@.
+> frank.wang04 | at | gmail | dot | com
 
-or follow 
+follow 
 
-> [@o_lll](https://twitter.com/#!/o_lll)
+> […•–ƒ≤°øÒ] (http://weibo.com/yipansansha)
+> [“ª≈Ã…¢…≥] (https://twitter.com/yipansansha)
 
-to reach me
