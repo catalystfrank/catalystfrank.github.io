@@ -61,6 +61,13 @@ code {
   background-color: #f8f8f8;
   padding: 2px 5px;
   border: 1px dashed #e0e0e0; }
+  
+
+code.has-jax {
+	font: inherit; 
+	font-size: 100%; 
+	background: inherit; 
+	border: inherit;}
 
 h1, h2 {
   font-size: 1.4em; }
@@ -198,3 +205,5 @@ footer {
 .gist {
   font-size: 13px;
   line-height: 1.6; }
+
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
