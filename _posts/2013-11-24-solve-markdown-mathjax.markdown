@@ -7,13 +7,13 @@ tags:
 ---
 
 
-## 高效建站，玩转github+markdown+mathjax
+### 高效建站，玩转github+markdown+mathjax
 
 今天效率超高，Github自带Jekyll后台解析markdown，等着就行了，但是和mathjax各种冲突，终于找到解决方案！
 
 我用的模板是别人Jekyll Boostrap的，暂时没mac没linux没钱怎么办？抄啊！
 
-github上面建立一个同名地址，yourname.github.io格式，开抄，还不懂的参考[github.com/catalystfrank](github.com/catalystfrank)
+github上面建立一个同名地址，yourname.github.io格式，开抄，还不懂的参考[github.com/catalystfrank](http://github.com/catalystfrank)
 
 抄完记得注册一个disqus授权博客评论哦。.name域名设置MyDNS 2个小时开启，开A级Url跳转，当然github也要加CNAME。两边联通测试，博客就能用啦。
 
