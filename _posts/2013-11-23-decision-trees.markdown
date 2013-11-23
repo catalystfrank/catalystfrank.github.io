@@ -46,16 +46,16 @@ tags:
 决策树自上而下的循环分支学习（Recursive Regression）采用了贪心算法。每个分支节点只关心自己的目标函数。具体来说, 给定一个分支节点, 以及落在该节点上对应样本的观测（包含自变量与目标变量），选择某个（一次选择一个变量的方法很常见）或某些预测变量，也许会经过一步对变量的离散化（对于连续自变量<math>X</math>而言），经过搜索不同形式的分叉函数且得到一个最优解（最优的含义是特定准则下收益最高或损失最小）。这个分支过程, 从根节点开始, 递归进行, 不断产生新的分支, 直到满足结束准则时停止。整个过程和树的分支生长非常相似。
 
 
-##测试(预测)
+## 测试(预测)
 
 
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are 
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are 
 
-\[\begin{equation}\label{sss} x = {-b \pm \sqrt{b^2-4ac} \over 2a}\end{equation}\]
+$\label{sss} x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
 
 $f_1(x) = x_3 - 1 = 0 - 1 = -1$
 
-$$f_1(x) = x_3 - 1 = 0 - 1 = -1$$
+$$\label{sss}f_1(x) = x_3 - 1 = 0 - 1 = -1$$
 
 下图提供了一个简单的例子说明决策树的测试过程. 测试样本为 <math> x = [3,2,0]; </math>
 进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于0， 进入左分支
