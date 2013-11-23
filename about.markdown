@@ -13,6 +13,6 @@ E-mail
 
 follow 
 
-> [É¥ĞÄ²¡¿ñ](http://weibo.com/yipansansha)
-> [Ò»ÅÌÉ¢É³](https://twitter.com/yipansansha)
+> [Yipansansha@SinaWeibo](http://weibo.com/yipansansha)
+> [Yipansansha@Twitter](https://twitter.com/yipansansha)
 
