@@ -3,13 +3,9 @@ title: about
 layout: page
 ---
 
-a
+A
 
-> Minimalist | Appleist | Unixer | Coder
-
-who involved in 
-
-> [github](https://github.com/waynezhang)
+> Vocalist? | Coder? | Machine Learner? | Workaholic.
 
 mail 
 
