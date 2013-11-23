@@ -19,46 +19,46 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
 
 ### \_config.yml 需要改：
 
-<code> markdown: kramdown </code>
+<pre><code> markdown: kramdown </code></pre>
 
 不改就坑爹，rdiscount比他老一点，其他更老，仔细看，欢迎纠正。
 
 ### post.html 需要改：
 
 
-<pre><code><script type="text/x-mathjax-config">															  
-    MathJax.Hub.Config({                                               
-    tex2jax: {                                                         
-    inlineMath: [['$','$'], ['\\(','\\)']],                            
-    processEscapes: true,                                              
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']       
-    },                                                                 
-    TeX: {                                                             
-    equationNumbers: {                                       
-    autoNumber: ["AMS"],                                 
-    useLabelIds: true                                    
-    }                                                        
-    },                                                           
-    "HTML-CSS": {                                                
-    linebreaks: {                                            
-    automatic: true                                      
-    },                                                       
-    scale: 85                                                
-    },                                                           
-    SVG: {                                                       
-    linebreaks: {                                            
-    automatic: true                                      
-    }                                                        
-    }                                                            
-    });                                                                
-    MathJax.Hub.Queue(function() {                                     
-    var all = MathJax.Hub.getAllJax(), i;                            
-    for(i = 0; i < all.length; i += 1) {                             
-    all[i].SourceElement().parentNode.className += ' has-jax';   
-    }                                                                
-    });                                                                
-    </script>                                                          
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<pre><code><script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  processEscapes: true,
+  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  },
+	TeX: {
+            equationNumbers: {
+                autoNumber: ["AMS"],
+                useLabelIds: true
+            }
+        },
+        "HTML-CSS": {
+            linebreaks: {
+                automatic: true
+            },
+            scale: 85
+        },
+        SVG: {
+            linebreaks: {
+                automatic: true
+            }
+        }
+	});
+	MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+	});
+	</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </code></pre>
 
 ### style.css需要改：
