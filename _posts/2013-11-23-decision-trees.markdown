@@ -88,8 +88,11 @@ tags:
 举例以说明：
 
 \begin{equation}
-	f(x)=x-a\left\{\begin{array}{ll} <=0 \mbox{ ,then go to the left branch} \\
- 	>0 \mbox{ ,then go to the right branch} \end{array}\right.
+f(x)=x-a
+\begin{cases}
+<=0 \text{then go to the left branch}\\
+ >0 \text{then go to the right branch} 
+\end{cases}
 \end{equation}
 
 $f(X)$为决定一个含X观测的样本进入左分支还是右分支的判断条件。此函数即为一个合理的备选分支函数。
@@ -242,8 +245,11 @@ $-log\_{10}(mP) = \mbox{Logworth} -log\_{10}{m}$
 经过调整，我们将Logworth进行调整，减掉的部分为$-log\_{10}(m)$，其中$m$即为前面推导的“$L$水平，$B$分支时，全部备择分支函数集合”的大小：
 
 \begin{equation}
-	m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} \& \\
- 	S(L,B) \mbox{ , when X is Nominal} \& \end{array}\right.
+m=
+\begin{cases}
+  C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} \\
+  S(L,B) \mbox{ , when X is Nominal} 
+\end{cases}
 \end{equation}
 
 {| class="wikitable"
