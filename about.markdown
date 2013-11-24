@@ -1,6 +1,6 @@
 ---
-title: 关于我
-layout: post
+title: about
+layout: page
 ---
 
 ###王威扬
@@ -42,4 +42,4 @@ Follow me
 
 > [Yipansansha@SinaWeibo](http://weibo.com/yipansansha)
 > [Yipansansha@Twitter](https://twitter.com/yipansansha)
-> [散沙@5sing](http://www.5sing.com/13163223/default.html)
+> [Sansha@5sing](http://www.5sing.com/13163223/default.html)
