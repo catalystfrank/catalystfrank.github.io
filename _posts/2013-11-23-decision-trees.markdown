@@ -90,8 +90,8 @@ tags:
 \begin{equation}
 f(x)=x-a
 \begin{cases}
-<=0 \text{then go to the left branch}\\
- >0 \text{then go to the right branch} 
+  <=0 \text{then go to the left branch} \\\\
+  >0 \text{then go to the right branch} 
 \end{cases}
 \end{equation}
 
@@ -247,7 +247,7 @@ $-log\_{10}(mP) = \mbox{Logworth} -log\_{10}{m}$
 \begin{equation}
 m=
 \begin{cases}
-  C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} \\
+  C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} \\\\
   S(L,B) \mbox{ , when X is Nominal} 
 \end{cases}
 \end{equation}
@@ -357,7 +357,7 @@ $ASE = 1 - \sum\_{i=1}^N p\_{i-train}p\_{i-valid}$
 
 根据前面定义的几种评价树的规则（损失或者收益函数），定义树模型的选择标准，最小化下式：
 
-$R\_{\alpha}(T)=R(T)+\alpha |T|$
+$R\_{\alpha}(T)=R(T)+\alpha \|T\|$
 
 其中T为树的总结点个数。这个定义有点像模型选择中的信息选择的定义（SBC, AIC等）：选择越多变量或者树的节点越多，解释性越强，训练集上的风险越小，但泛化性能也会变差。合理选择参数$\alpha$，使得损失与树的节点个数的某个线性叠加最小，这样模型会更稳健。
 
@@ -395,20 +395,20 @@ $R\_{\alpha}(T)=R(T)+\alpha |T|$
 *后向剪枝：ASE
 
 ==CHAID(CHi-squared Automatic Interaction Detection)==
-*分支准则：Pearson卡方检验，显著性 1e-5，使用Kass P调整
-*分支数：<=6
-*节点大小：150
-*模型选择：因为存在前剪枝，使用最大树
+分支准则：Pearson卡方检验，显著性 1e-5，使用Kass P调整
+分支数：<=6
+*
+模型选择：因为存在前剪枝，使用最大树
 
 =决策树的大规模训练=
-==交叉验证(Cross Validation)==
-==袋装法(Bagging)==
-==推进法(Boosting)==
+交叉验证(Cross Validation)==
+袋装法(Bagging)==
+推进法(Boosting)==
 
 =辅助功能=
-*变量选择
-*变量离散化
-*离散化程度降低
-*交互作用检测
-*分层回归
-*回归缺失值补齐
+变量选择
+变量离散化
+离散化程度降低
+交互作用检测
+分层回归
+回归缺失值补齐
