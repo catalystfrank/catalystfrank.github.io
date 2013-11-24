@@ -90,8 +90,8 @@ tags:
 \begin{equation}
 f(x)=x-a
 \begin{cases}
-  <=0 \text{then go to the left branch} \\ \\
-  >0 \text{then go to the right branch} 
+  <=0 \text{then go to the left branch} `&` `\``\`
+  >0 \text{then go to the right branch} `&`
 \end{cases}
 \end{equation}
 
