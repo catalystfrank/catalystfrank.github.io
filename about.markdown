@@ -1,6 +1,9 @@
 ---
 title: about
-layout: page
+layout: post
+guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d79
+tags:
+  - 个人信息
 ---
 
 ###王威扬
@@ -34,11 +37,13 @@ layout: page
 周末会参加脑神经科学/机器学习/社会科学复杂网络读书会，偶尔参加数盟(统计之都)活动。
 
 
-E-mail 
+工作请邮件：
 
 > frank.wang04 | at | gmail | dot | com
 
-Follow me
+> stochasticfrank04 | at | 163 | dot | com
+
+想Follow我请：（但你只会看到我神经病的一面）
 
 > [丧心病狂@SinaWeibo](http://weibo.com/yipansansha)
 
