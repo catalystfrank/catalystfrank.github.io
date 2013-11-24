@@ -41,6 +41,7 @@ tags:
 
 > frank.wang04 | at | gmail | dot | com  
 > stochasticfrank04 | at | 163 | dot | com  
+
 Follow我请点击：（但你只会看到我神经病的一面）  
 > [丧心病狂@SinaWeibo](http://weibo.com/yipansansha)  
 > [Yipansansha@Twitter](https://twitter.com/yipansansha)  
