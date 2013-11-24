@@ -397,16 +397,19 @@ $R\_{\alpha}(T)=R(T)+\alpha \|T\|$
 * 后向剪枝：ASE
 
 ==CHAID(CHi-squared Automatic Interaction Detection)==
+
 * 分支准则：Pearson卡方检验，显著性 1e-5，使用Kass P调整
 * 分支数：<=6
 * 模型选择：因为存在前剪枝，使用最大树
 
-=决策树的大规模训练=
+=决策树的大规模训练
+
 * 交叉验证(Cross Validation)==
 * 袋装法(Bagging)==
 * 推进法(Boosting)==
 
 =辅助功能=
+
 * 变量选择
 * 变量离散化
 * 离散化程度降低
