@@ -1,6 +1,6 @@
 ---
-title: about
-layout: page
+title: 关于我
+layout: post
 ---
 
 ###王威扬
