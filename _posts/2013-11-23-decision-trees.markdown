@@ -88,7 +88,7 @@ tags:
 举例以说明：
 
 \begin{equation}
-	f(x)=x-a\left\{\begin{array}{ll} <=0 \mbox{ ,then go to the left branch} & \\
+	f(x)=x-a\left\{\begin{array}{ll} <=0 \mbox{ ,then go to the left branch} \& \\
  	>0 \mbox{ ,then go to the right branch} & \end{array}\right.
 \end{equation}
 
@@ -183,7 +183,7 @@ $\mathcal{Y}\_{b}, b \in \{1,2,....,B\}$ 为对应的标签集合。
 
 使用以上定义的符号, 分支函数的学习准则可以描述成如下的优化问题:
 
-$ f^{\*} = \underset{f}\text{argmin} ( \sum\_{b=1}^{B} L(\mathcal{X}\_{b}, \mathcal{Y}\_{b}) ) $
+$ f^ * = \underset{f}\text{argmin} ( \sum\_{b=1}^{B} L(\mathcal{X}\_{b}, \mathcal{Y}\_{b}) ) $
 
 其中损失函数$ L(\mathcal{X}, \mathcal{Y}) $ 描述了样本的不纯度带来的损失。对于一个子节点$b$，给定样本数，如果其中样本的标签都相同, 那么样本纯度很高, 对应的损失函数值低；如果样本标签随机分布, 那么样本纯度很低，对应的损失函数值高。给定$ \mathcal{Y}$在分类集上的概率密度，如果标签都相同，那么不管样本数的多少，纯度都很高，损失为0；如果标签随机分布，纯度很低，那么样本总数越多，带来的损失就越大。
 
@@ -242,7 +242,7 @@ $-log\_{10}(mP) = \mbox{Logworth} -log\_{10}{m}$
 经过调整，我们将Logworth进行调整，减掉的部分为$-log\_{10}(m)$，其中$m$即为前面推导的“$L$水平，$B$分支时，全部备择分支函数集合”的大小：
 
 \begin{equation}
-	m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} & \\
+	m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} \& \\
  	S(L,B) \mbox{ , when X is Nominal} & \end{array}\right.
 \end{equation}
 
@@ -306,8 +306,8 @@ $F=(\frac{SS\_{between}}{SS\_{within}})(\frac{n-B}{B-1}) \sim F\_{B-1,n-B}$
 在实际使用中，如果变量间有较强的局部/全局共线性，使用这种方法是不当的。
 
 =叶节点(树的输出)=
-*对于分类树, 决策树的叶节点上的输出就是所有类别的后验概率 $ P(c|x) $. 可以用该叶节点各类别样本的频率来近似后验概率 $ P(c|x) $. 后验概率最大的类别就是决策树对于新进单个观测点的预测结果，也就是 $ c^* = \underset{c}{\text{argmax}} P(c|x) $。
-*对于回归树，决策树的叶节点上的输出是叶子结点上观测点目标变量$Y$的中位数
+对于分类树, 决策树的叶节点上的输出就是所有类别的后验概率 $ P(c|x) $. 可以用该叶节点各类别样本的频率来近似后验概率$P(c|x)$。后验概率最大的类别就是决策树对于新进单个观测点的预测结果，也就是 $ c^ * = \underset{c}{\text{argmax}} P(c|x) $。
+对于回归树，决策树的叶节点上的输出是叶子结点上观测点目标变量$Y$的中位数
 
 =决策树停止生长准则=
 
