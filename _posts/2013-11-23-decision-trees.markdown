@@ -88,8 +88,8 @@ tags:
 举例以说明：
 
 \begin{equation}
-f(x)=x-a\left\{\begin{array}{ll} <=0 \mbox{ ,then go to the left branch} & 
- >0 \mbox{ ,then go to the right branch} & \end{array}\right.
+	f(x)=x-a\left\{\begin{array}{ll} <=0 \mbox{ ,then go to the left branch} & \\
+ 	>0 \mbox{ ,then go to the right branch} & \end{array}\right.
 \end{equation}
 
 $f(X)$为决定一个含X观测的样本进入左分支还是右分支的判断条件。此函数即为一个合理的备选分支函数。
@@ -113,7 +113,7 @@ $f(X)$为决定一个含X观测的样本进入左分支还是右分支的判断�
 X是列名型变量，取值为$\{1,2,...,9\}$，水平之间不存在排序关系。若函数形式为
 
 \begin{equation}
-	f(x) = x%3
+	f(x) = x\%3
 \end{equation}
 
 一个观测点依据变量X的取值除以3的余数来选择究竟要进入0，1，2分支中的哪一个。因为原变量是无序的，分支也自然无法定义有序，此函数为一个合理的分支函数。
@@ -183,7 +183,7 @@ $\mathcal{Y}\_{b}, b \in \{1,2,....,B\}$ 为对应的标签集合。
 
 使用以上定义的符号, 分支函数的学习准则可以描述成如下的优化问题:
 
-$ f^* = \underset{f}\text{argmin} ( \sum\_{b=1}^{B} L(\mathcal{X}\_{b}, \mathcal{Y}\_{b}) ) $
+$ f^{\*} = \underset{f}\text{argmin} ( \sum\_{b=1}^{B} L(\mathcal{X}\_{b}, \mathcal{Y}\_{b}) ) $
 
 其中损失函数$ L(\mathcal{X}, \mathcal{Y}) $ 描述了样本的不纯度带来的损失。对于一个子节点$b$，给定样本数，如果其中样本的标签都相同, 那么样本纯度很高, 对应的损失函数值低；如果样本标签随机分布, 那么样本纯度很低，对应的损失函数值高。给定$ \mathcal{Y}$在分类集上的概率密度，如果标签都相同，那么不管样本数的多少，纯度都很高，损失为0；如果标签随机分布，纯度很低，那么样本总数越多，带来的损失就越大。
 
@@ -241,10 +241,10 @@ $-log\_{10}(mP) = \mbox{Logworth} -log\_{10}{m}$
 
 经过调整，我们将Logworth进行调整，减掉的部分为$-log\_{10}(m)$，其中$m$即为前面推导的“$L$水平，$B$分支时，全部备择分支函数集合”的大小：
 
-$
-m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} & \\
- S(L,B) \mbox{ , when X is Nominal} & \end{array}\right.
-$
+\begin{equation}
+	m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} & \\
+ 	S(L,B) \mbox{ , when X is Nominal} & \end{array}\right.
+\end{equation}
 
 {| class="wikitable"
 |-
