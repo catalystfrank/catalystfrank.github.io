@@ -49,14 +49,14 @@ tags:
 ## 测试(预测)
 
 \begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \int\_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
   \label{eq:sample2}
 \end{equation}
 
 下图提供了一个简单的例子$\ref{eq:sample2}$说明决策树的测试过程. 测试样本为$x = [3,2,0]$;
-进入根节点, 分支函数 $f_1(x) = x_3 - 1 = 0 - 1 = -1$ 小于$0$， 进入左分支
-分支函数$f_2(x) = x_1 - x_2 + 1 = 3 - 2 + 1 = 2$大于$0$, 进入右分支
-分支函数$f_4(x) = x_2 + 1 = 2 + 1 = 3$大于$0$, 进入右分支, 已经到达叶节点
+进入根节点, 分支函数 $f\_1(x) = x\_3 - 1 = 0 - 1 = -1$ 小于$0$， 进入左分支
+分支函数$f\_2(x) = x\_1 - x\_2 + 1 = 3 - 2 + 1 = 2$大于$0$, 进入右分支
+分支函数$f\_4(x) = x\_2 + 1 = 2 + 1 = 3$大于$0$, 进入右分支, 已经到达叶节点
 假设是三分类问题, 该叶节点上所有类别的后验概率是 $(0.1, 0.7, 0.2)$, 那么该决策树预测输入样本属于第二类.
 
 [[File:DecisionTree2.png]]
@@ -66,7 +66,7 @@ tags:
 
 # 分支函数形式
 在具体的学习过程中， 需要明确定义分支函数的具体形式. 常用的函数的形式都非常的简单如:
- 一维线性函数: \begin{equation}f(x) = x_i + b\end{equation}
+ 一维线性函数: \begin{equation}f(x) = x\_i + b\end{equation}
  多维线性函数: \begin{equation}f(x) = <a,x> + b \end{equation}, 其中$<a,x>$表示向量内积。
 
 一般地，在常见的工程应用中使用一维线性函数。计算允许的条件下使用2-3个变量的线性组合作为分支函数的可能形式。
@@ -75,7 +75,7 @@ tags:
 
 为寻找合适的决策变量$X$与分支函数$f(x:X\rightarrow B)$，首先要找到全部把$X$变量的不同水平(Levels)集合$L$映射到预先设置好的节点分叉集(Branches)$B$上的解集，得到$\{g(L \rightarrow B)\}$。$X$到$L$上的映射$h(X \rightarrow L)$，对于离散型变量而言就是对自身的映射，而对于连续型变量而言是向所属离散化区段的映射。最后得到分支函数的备选集合$\{f(x:X \rightarrow B)\} = \{g(h(x))\}$。
 
-[[File:decisiontree_robustsplitordinal.png]]
+[[File:decisiontree\_robustsplitordinal.png]]
 
 如上图，我们可以看到对于任意区间型或者序数型的变量X与任意单调映射f，使用X和f(X)作为预测函数的变量，决策树的结果没有改变。同理，单独变化极端值也不会对决策树结果进行影响。可以说这种分支函数的选择使得决策树建模具有稳健性。
 
@@ -101,7 +101,7 @@ $f(X)$为决定一个含X观测的样本进入左分支还是右分支的判断�
 因此，进行最多$B$分叉时，搜索可得到备选分支函数的总数为一组组合数的和：
 
 \begin{equation}
-	\sum_{b=2}^{B} C_{L-1}^{b-1}
+	\sum\_{b=2}^{B} C\_{L-1}^{b-1}
 \end{equation}
 
 易得，在二叉树时，需要搜索的备择分支函数总数仅有$L-1$个。
@@ -145,17 +145,17 @@ X是列名型变量，取值为$\{1,2,...,9\}$，水平之间不存在排序关�
 
 考虑所有$B$的可能（从2到$L$）并求和，称为贝尔数(Bell Number)：
 
-\begin{equation}B_L=\sum_{b=1}^L{S(L,b)}\end{equation}
+\begin{equation}B\_L=\sum\_{b=1}^L{S(L,b)}\end{equation}
 
-在实际问题中，为避免备择函数总数增加过快，我们也会限制分叉数最大值$ B_{max} $不超过5，2或3是较好的选择。
-这样避免了搜索贝尔数$ \sum\_{b=2}^L{S(L,b)}=B\_L - 1 $这样多的备择分支函数。搜索数缩小到$\sum\_{b=2}^{B\o_{max}}{S(L,b)}$，运算复杂度数量级降低。
+在实际问题中，为避免备择函数总数增加过快，我们也会限制分叉数最大值$ B\_{max} $不超过5，2或3是较好的选择。
+这样避免了搜索贝尔数$ \sum\_{b=2}^L{S(L,b)}=B\_L - 1 $这样多的备择分支函数。搜索数缩小到$\sum\_{b=2}^{B\o\_{max}}{S(L,b)}$，运算复杂度数量级降低。
 
 其他有助于优化搜索的方法：
 用于搜索的变量在全树中只使用一次
 节点内部采样，减少观测
 对$L$个水平进行层次聚类。CHAID使用了这种技术：
 
-[[File:decisiontree_chaid_clustering.png]]
+[[File:decisiontree\_chaid\_clustering.png]]
 
 a)处理序数型或区间型变量时，在层次聚类时只考虑相邻分支的聚类，选择条件是“两个分支在目标变量上的分布最接近”（卡方意义上）；
 
@@ -177,9 +177,9 @@ b)处理列名型变量时，在层次聚类时考虑任意两个分支的聚类
 
 得到备选集合后，我们选取的最优分支函数应该使得其全部子节点上的样本的加权损失函数和最小。 
 
-假设当前分支节点所有样本为 $\{ x_1,x_2,...,x_n\}$, 对应的类别标签为$\{ y_1,y_2,...,y_n\}$ 
-分支函数$ f(x: X \rightarrow B) $将样本划分到两个或多个子节点. 其中$ \mathcal{X}_{b} = \{x_i | f(x_i)=b\} $ 表示第$b$个子节点样本的集合，$b \in \{1,2,...,B\}$ 
-$\mathcal{Y}_{b}, b \in \{1,2,....,B\}$ 为对应的标签集合。
+假设当前分支节点所有样本为 $\{ x\_1,x\_2,...,x\_n\}$, 对应的类别标签为$\{ y\_1,y\_2,...,y\_n\}$ 
+分支函数$ f(x: X \rightarrow B) $将样本划分到两个或多个子节点. 其中$ \mathcal{X}\_{b} = \{x\_i | f(x\_i)=b\} $ 表示第$b$个子节点样本的集合，$b \in \{1,2,...,B\}$ 
+$\mathcal{Y}\_{b}, b \in \{1,2,....,B\}$ 为对应的标签集合。
 
 使用以上定义的符号, 分支函数的学习准则可以描述成如下的优化问题:
 
@@ -193,56 +193,56 @@ $ f^* = \underset{f}\text{argmin} ( \sum\_{b=1}^{B} L(\mathcal{X}\_{b}, \mathcal
 
 ===分类树损失函数===
 
-假设$p_i$表示第$i$样本数量占所有样本总量$ n $的百分比。
+假设$p\_i$表示第$i$样本数量占所有样本总量$ n $的百分比。
 
 不同准则下，使用损失函数可以得到每次分支带来损失下降的规律：
 
-[[File:decisiontree_impurity.png]]
+[[File:decisiontree\_impurity.png]]
 
 ====基尼不纯度(Gini impurity)准则====
 
-$ l_{G}(p) \propto n \sum_{i=1}^{m} p_i (1-p_i) $
+$ l\_{G}(p) \propto n \sum\_{i=1}^{m} p\_i (1-p\_i) $
 
 按其定义式所表达的，它的含义是“任意取两个观测其属于不同类的概率”。生态学中，与Simpson's Diversity Index具有相同定义。
 
-[[File:decisiontree_gini_impurity.png]]
+[[File:decisiontree\_gini\_impurity.png]]
 
 在分支时的基尼不纯度改进为：
 
-$\Delta Gini = i(0)-(\frac{n_1}{n_0}i(1)+\frac{n_2}{n_0}i(2)+\frac{n_3}{n_0}i(3)+... )$，$\{n_0,n_1,n_2,n_3,...\}$分别为当前节点与其分支节点的观测数；
+$\Delta Gini = i(0)-(\frac{n\_1}{n\_0}i(1)+\frac{n\_2}{n\_0}i(2)+\frac{n\_3}{n\_0}i(3)+... )$，$\{n\_0,n\_1,n\_2,n\_3,...\}$分别为当前节点与其分支节点的观测数；
 
 基尼不纯度改进越大，说明分支后各个子节点任取两个观测数与不同类的概率越低；
 
 ====信息熵(Information entropy)准则====
 
-$ l_{E}(p) \propto - n \sum^{m}_{i=1} p_i \log^{}_2 p_i$
+$ l\_{E}(p) \propto - n \sum^{m}\_{i=1} p\_i \log^{}\_2 p\_i$
 
 按其定义式所表达的，它的含义是“在该节点内使用变长码字对类别进行编码，所能达到的最优平均码字长度”
 
-[[File:decisiontree_entropy.png]]
+[[File:decisiontree\_entropy.png]]
 
 在分支时的调减熵减为：
 
-$ \Delta H = H(0)-(\frac{n_1}{n_0}H(1)+\frac{n_2}{n_0}H(2)+\frac{n_3}{n_0}H(3)+... ) $
+$ \Delta H = H(0)-(\frac{n\_1}{n\_0}H(1)+\frac{n\_2}{n\_0}H(2)+\frac{n\_3}{n\_0}H(3)+... ) $
 
 熵减越大，说明节点经过一步分支后，各节点都能以较短的变长码字进行编码；
 
 ====对数价值(Logworth)准则====
 
-在分支时，分支规则与对目标规则关联性越强，皮尔逊卡方检验值（Pearson's Chi-Square Test）对应P值的负对数 $-log_{10}(P(\mathcal{X}_{\nu}^2>\sum_{i,j}\frac{(O_{ij}-E{ij})^2}{E_{ij}}))$就越大。
+在分支时，分支规则与对目标规则关联性越强，皮尔逊卡方检验值（Pearson's Chi-Square Test）对应P值的负对数 $-log\_{10}(P(\mathcal{X}\_{\nu}^2>\sum\_{i,j}\frac{(O\_{ij}-E{ij})^2}{E\_{ij}}))$就越大。
 
-其中，皮尔逊卡方统计量为在0假设（分支对分类毫无改进）下所有加权误差平方之和$\sum_{i,j}\frac{(O_{ij}-E{ij})^2}{E_{ij}}$，其中自由度$\nu=(B-1)(card(Y)-1)$
+其中，皮尔逊卡方统计量为在0假设（分支对分类毫无改进）下所有加权误差平方之和$\sum\_{i,j}\frac{(O\_{ij}-E{ij})^2}{E\_{ij}}$，其中自由度$\nu=(B-1)(card(Y)-1)$
 
 ====经过Kass调整（Bonferroni界调整）的对数价值(P-Adjusted Logworth)准则====
 
-$-log_{10}(mP) = \mbox{Logworth} -log_{10}{m}$
+$-log\_{10}(mP) = \mbox{Logworth} -log\_{10}{m}$
 
 直觉上我们对对数价值法进行反思考虑如下的问题：如果我们尝试足够多的分支大小与可能性，是否我们在滥用Logworth法？我们把备择分支方案数目增大100倍，自然会选到Logworth更大的分支函数，而一味的细分分支使用的变量$X$丝毫不能说明$X$的预测强度正在变强。
 
-经过调整，我们将Logworth进行调整，减掉的部分为$-log_{10}(m)$，其中$m$即为前面推导的“$L$水平，$B$分支时，全部备择分支函数集合”的大小：
+经过调整，我们将Logworth进行调整，减掉的部分为$-log\_{10}(m)$，其中$m$即为前面推导的“$L$水平，$B$分支时，全部备择分支函数集合”的大小：
 
 $
-m=\left\{\begin{array}{ll} C_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} & \\
+m=\left\{\begin{array}{ll} C\_{L-1}^{B-1} \mbox{ , when X is Ordinal/Interval} & \\
  S(L,B) \mbox{ , when X is Nominal} & \end{array}\right.
 $
 
@@ -267,27 +267,27 @@ $\Delta Gini=0.197, \Delta H=0.504, \mbox{Logworth}=140, m=96, \mbox{Adjusted Lo
 
 很自然的，对于回归树而言，某子节点$b$上的所谓“不纯度”可以用其因变量$Y$的方差来表示：
 
-[[File:decisiontree_var_red.png]]
+[[File:decisiontree\_var\_red.png]]
 
-${Var}_b = \frac{1}{n_b}\sum_{j=1}^{n_b}(y_{jb}-\bar{y}_b)^2$
+${Var}\_b = \frac{1}{n\_b}\sum\_{j=1}^{n\_b}(y\_{jb}-\bar{y}\_b)^2$
 
 ====绝对偏差(Least Absolute Deviation)准则====
 
-${LAD}_b = \frac{1}{n_b}\sum_{j=1}^{n_b}|y_{jb}-\bar{y}_b|$
+${LAD}\_b = \frac{1}{n\_b}\sum\_{j=1}^{n\_b}|y\_{jb}-\bar{y}\_b|$
 
 ====分支规则的F检验(Branching's F-Test)准则====
 
 根据传统的单路方差分析（One-Way Analysis of Variance），可以得到如下定义：
 
-分支节点间方差：$SS_{between}=\sum_{b=1}^B n_b(\bar{y}_b-\bar{y})^2$
+分支节点间方差：$SS\_{between}=\sum\_{b=1}^B n\_b(\bar{y}\_b-\bar{y})^2$
 
-分支节点内方差：$SS_{within}=\sum_{b=1}^B\sum_{j=1}^{n_b} (\bar{y}_b-y_{jb})^2$
+分支节点内方差：$SS\_{within}=\sum\_{b=1}^B\sum\_{j=1}^{n\_b} (\bar{y}\_b-y\_{jb})^2$
 
-分支前总方差：$SS_{between}=\sum_{b=1}^B\sum_{j=1}^{n_b} (\bar{y}-y_{jb})^2$
+分支前总方差：$SS\_{between}=\sum\_{b=1}^B\sum\_{j=1}^{n\_b} (\bar{y}-y\_{jb})^2$
 
 F-统计量检验：
 
-$F=(\frac{SS_{between}}{SS_{within}})(\frac{n-B}{B-1}) \sim F_{B-1,n-B}$
+$F=(\frac{SS\_{between}}{SS\_{within}})(\frac{n-B}{B-1}) \sim F\_{B-1,n-B}$
 
 这些在强烈异方差性下表现并不稳定。建议先对因变量$Y$做合适的变换（如乘幂，取对数等）防止稳定性降低。
 
@@ -320,7 +320,7 @@ $F=(\frac{SS_{between}}{SS_{within}})(\frac{n-B}{B-1}) \sim F_{B-1,n-B}$
 
 ==后向剪枝条件==
 
-[[File:decisiontree_postpruning.png]]
+[[File:decisiontree\_postpruning.png]]
 
 在训练集上正确率随着叶子节点的增加而增加，但模型在验证数据集上，叶子节点数超过某个阈值后泛化能力反而会减弱。有时我们要在正向分支过程上创造远多于我们所需要的节点（如使用层数停止准则），然后根据一定规则，使用验证数据集进行后向剪枝。
 
@@ -330,12 +330,12 @@ $F=(\frac{SS_{between}}{SS_{within}})(\frac{n-B}{B-1}) \sim F_{B-1,n-B}$
 
 *最小化误分类/最大化准确度（分类树）：
 
-$\mbox{Accuracy}=\frac{n_{TP}+n_{TN}}{n}$
+$\mbox{Accuracy}=\frac{n\_{TP}+n\_{TN}}{n}$
 
 *最大化收益（分类树）：
 
 我们可以做更宽泛的假设，对不同类的观测进行预测产生的误分类，导致的利润（损失）也是不一样的。
-$\mbox{Profit}=\mbox{Profit}_{TP}\frac{n_{TP}}{n}+\mbox{Profit}_{TN}\frac{n_{TN}}{n}+\mbox{Profit}_{FP}\frac{n_{FP}}{n}+\mbox{Profit}_{FN}\frac{n_{FN}}{n}$
+$\mbox{Profit}=\mbox{Profit}\_{TP}\frac{n\_{TP}}{n}+\mbox{Profit}\_{TN}\frac{n\_{TN}}{n}+\mbox{Profit}\_{FP}\frac{n\_{FP}}{n}+\mbox{Profit}\_{FN}\frac{n\_{FN}}{n}$
 
 *纯度准则（分类树，回归树）：
 
@@ -345,21 +345,21 @@ $\mbox{Profit}=\mbox{Profit}_{TP}\frac{n_{TP}}{n}+\mbox{Profit}_{TN}\frac{n_{TN}
 
 使用平均平方误差作为后向剪枝准则是使用纯度准则的一个特例。对于回归树这一点不难理解，对于分类树来说，这是在验证集上重新计算类似Gini不纯度的指标：
 
-$ASE = 1 - \sum_{i=1}^N p_{i-train}p_{i-valid}$
+$ASE = 1 - \sum\_{i=1}^N p\_{i-train}p\_{i-valid}$
 
 *稳健性模型选择
 
 根据前面定义的几种评价树的规则（损失或者收益函数），定义树模型的选择标准，最小化下式：
 
-$R_{\alpha}(T)=R(T)+\alpha |T|$
+$R\_{\alpha}(T)=R(T)+\alpha |T|$
 
 其中T为树的总结点个数。这个定义有点像模型选择中的信息选择的定义（SBC, AIC等）：选择越多变量或者树的节点越多，解释性越强，训练集上的风险越小，但泛化性能也会变差。合理选择参数$\alpha$，使得损失与树的节点个数的某个线性叠加最小，这样模型会更稳健。
 
 *提升度(Lift)方法（分类树）：
 
-如果我们特定感兴趣某一类事件A，我们可以通过把A事件在每一个叶子结点中出现的比例从大到小排序。设其在整个观测中出现的比例为$P_A$
+如果我们特定感兴趣某一类事件A，我们可以通过把A事件在每一个叶子结点中出现的比例从大到小排序。设其在整个观测中出现的比例为$P\_A$
 
-依次加入这些叶子结点，我们得到从0%到100%观测的序列，这中间预测正确的A事件的概率（预测性能）从一个很高的值$P^*_A$下降到$P_A$，这样考察前面尽量少的一部分比例的观测点可以提取出尽量多的A事件。这条轨道上的每一个值比上$P_A$得到了一条新的轨道，称为Lift曲线，在100%观测处轨道下降到1。一条值恒为1的水平线称为基准线（Baseline）。
+依次加入这些叶子结点，我们得到从0%到100%观测的序列，这中间预测正确的A事件的概率（预测性能）从一个很高的值$P^*\_A$下降到$P\_A$，这样考察前面尽量少的一部分比例的观测点可以提取出尽量多的A事件。这条轨道上的每一个值比上$P\_A$得到了一条新的轨道，称为Lift曲线，在100%观测处轨道下降到1。一条值恒为1的水平线称为基准线（Baseline）。
 
 =模型性能诊断=
 
