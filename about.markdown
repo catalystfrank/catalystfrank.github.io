@@ -36,10 +36,10 @@ layout: page
 
 E-mail 
 
-> frank.wang04 | at | gmail | dot | com
+    frank.wang04 | at | gmail | dot | com
 
 Follow me
 
-> [丧心病狂@SinaWeibo](http://weibo.com/yipansansha)
-> [Yipansansha@Twitter](https://twitter.com/yipansansha)
-> [散沙@5sing](http://www.5sing.com/13163223/default.html)
+    [丧心病狂@SinaWeibo](http://weibo.com/yipansansha)
+    [Yipansansha@Twitter](https://twitter.com/yipansansha)
+    [散沙@5sing](http://www.5sing.com/13163223/default.html)
