@@ -1,0 +1,26 @@
+---
+title: R简单实现神经网络模型
+layout: post
+guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d83
+tags:
+  - 工作
+  - 数据挖掘
+  - 神经网络
+---
+
+
+### 神经网络包
+
+    install.packages("DMwR")
+    install.packages("nnet")
+
+执行好之后加载。
+
+### 模型，预测，GGPLOT绘图
+
+    nn <- nnet(a1~., norm.data, size = 10, decay = 0.01, 
+    maxit = 1000, linout = T, trace = F)
+    norm.preds <- predict(nn, norm.data)
+    gg1<-ggplot(data=norm.data,aes(x=norm.data$a1,y=norm.preds))
+    gg1<-gg1+geom_point(colour='steelblue',alpha=0.1,size=2)
+    plot(gg1)
