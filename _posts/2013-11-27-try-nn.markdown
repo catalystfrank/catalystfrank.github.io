@@ -24,3 +24,16 @@ tags:
     gg1<-ggplot(data=norm.data,aes(x=norm.data$a1,y=norm.preds))
     gg1<-gg1+geom_point(colour='steelblue',alpha=0.1,size=2)
     plot(gg1)
+    
+![价格预测双对数图](\media\pic\2013-11-27\nnet-price.png)
+  
+![销售预测双对数图](\media\pic\2013-11-27\nnet-cnt.png) 
+
+
+### 模型对比
+
+为了处理预测销量和均价的走势面板数据（SKU-时间是主键，观测变量是销量和均价），一开始我是使用PCA提取主成分+时间序列模型做：
+
+*   加权回归: R中指定权重向量，或者PROC GLM中指定Weight
+*   Poisson回归：PROC GENMON 或者 glm(family=Poisson, link=log)
+*   普通线性回归
