@@ -15,3 +15,18 @@ TF-IDF（Term Frequency-Inverse Document Frequency，这东西看名字就知道
 
 ### Parallel Python
 
+[这里](http://www.cnblogs.com/flyingis/archive/2009/11/12/1601574.html)是一个Parallel Python很好的例子。
+
+因为就像submit job到服务器类似的写法，所以Single Machine Parallel也是能达到不错的性能的。
+
+顺便一说，这样好像很容易搞坏工作机，最好还是不要在集群上试。
+
+### 我的想法
+
+Anaconda这公司开发的NumbaPro已经成为Cuda Python的标准了，而且Google在Deep Learning上的研究也显示，GPU计算是未来一个高性能计算的重要方向。
+
+E5-2690v2 *2 + 128G 内存 + ThinkStation 机箱 + SuperMicro 主板 + GTX 780Ti，这是我现在能想到的高性能单机解决方案。
+
+真正想用起来的话，等到Cuda Toolkit 6.0出来之后，对内存的管理更加简单和规范大家就可以放心用了。
+
+我个人是从3.0开始用Cuda C++写GPU并行程序的，但是中间动荡了一段时间就给荒废了，希望最近能有机会捡起来。
