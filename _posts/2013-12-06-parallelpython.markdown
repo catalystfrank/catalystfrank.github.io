@@ -25,7 +25,9 @@ TF-IDF（Term Frequency-Inverse Document Frequency，这东西看名字就知道
 
 Anaconda这公司开发的NumbaPro已经成为Cuda Python的标准了，而且Google在Deep Learning上的研究也显示，GPU计算是未来一个高性能计算的重要方向。
 
-E5-2690v2 *2 + 128G 内存 + ThinkStation 机箱 + SuperMicro 主板 + GTX 780Ti，这是我现在能想到的高性能单机解决方案。
+我的机器装的是Anaconda Python + PyCharm IDE, 还有个2.7.5的Stackless。Stackless写法很整洁，可惜不是真并行。
+
+接下来这个方案：E5-2690v2 *2 + 128G 内存 + ThinkStation 机箱 + SuperMicro 主板 + GTX 780Ti，这是我现在能想到的高性能单机解决方案，只差钱了。
 
 真正想用起来的话，等到Cuda Toolkit 6.0出来之后，对内存的管理更加简单和规范大家就可以放心用了。
 
