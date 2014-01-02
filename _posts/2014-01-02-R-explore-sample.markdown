@@ -1,5 +1,5 @@
 ﻿---
-title: R数据探索代码样例
+title: R的快速数据探索
 layout: post
 guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d87
 tags:
