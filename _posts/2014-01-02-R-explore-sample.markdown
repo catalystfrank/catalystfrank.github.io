@@ -5,9 +5,7 @@ guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d87
 tags:
   - 数据探索
   - R
-  - 可视化
 ---
-
 
 ### 设置工作路径，请改动
 
