@@ -22,11 +22,9 @@ tags:
     library(e1071)
     ```
 
-
     ```
     ## Loading required package: class
     ```
-
 
     ```r
     library(colorspace)
@@ -40,7 +38,6 @@ tags:
 *   <em>rdataHaveColnames</em>：第一行是否带列名（T/F控制)
 *   <em>rdataExtColnames</em>：外部列名手动输入
 *   <em>rdataExtColDelim</em>：外部列名分割符，默认逗号
-
 
     ```r
     rdataName <- "iris.dat"
@@ -61,12 +58,10 @@ tags:
     )
     ```
 
-
 #### 将数据顺序打乱
 
     ```r
-    rdataframe <- rdataframe[sample(1:nrow(rdataframe), length(1:nrow(rdataframe))), 
-        1:ncol(rdataframe)]
+    rdataframe <- rdataframe[sample(1:nrow(rdataframe), length(1:nrow(rdataframe))),1:ncol(rdataframe)]
     ```
 
 ### 数据探索
