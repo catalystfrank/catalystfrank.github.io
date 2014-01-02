@@ -22,7 +22,7 @@ tags:
 +移除OpenJDK后安装JAVA 6u43 64bit（不是最新）
 +CUDA Toolkit 5.5，配置完后要声明无数变量
 +R 3.0.2 tar 包直接编译安装，配置完后要声明JAVA_HOME变量
-+R Studio Server，依赖前两个可以使用远程登录R（http://[ipaddress]:8787）
++R Studio Server，依赖前两个可以使用远程登录R（ http://[ipaddress]:8787 ）
 +SSH登陆
 +Anaconda Python 1.8.0，安装后可以直接用Conda或Pip管理Python包
 +MediaWiki 1.22，要先配置MySQL和Apache PHP，会顺便配好FTP
