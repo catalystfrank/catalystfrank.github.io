@@ -1,4 +1,4 @@
-﻿---
+---
 title: R的快速数据探索
 layout: post
 guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d87
@@ -207,5 +207,4 @@ tags:
         lower.panel = panel.smooth)
     ```
 
-使用R par作图 看着没有GGPLOT2高富帅 啧啧![R_par](media/pic/2014-01-02/R_par1.png) 
-
+使用R par作图 看着没有GGPLOT2高富帅 啧啧![R_par](media/pic/2014-01-02/R_par1.png)
