@@ -110,55 +110,43 @@ tags:
     ## 偏度                  -0.1009              NA
     ## 峰度                  -1.3582              NA
 
+#### 数据快照可视化
 
+##### 元数据定义
 
-#### 数据可视化快照
 *    <em>dataNumIndexString</em>：数值型列序号字符串（从1开始计数），默认逗号分割
 *    <em>dataNumIndexSep</em>：数值型变量列序号字符串的分割符
 *    <em>dataClassIndexString</em>：分类型列序号字符串（单个）
 
-    ```r
+##### 元数据传参
     dataNumIndexString <- "1,2,3,4"
     dataNumIndexSep <- ","
     dataClassIndexString <- "5"
     
     dataNumIndex <- as.integer(strsplit(dataNumIndexString, dataNumIndexSep)[[1]])
     dataClassIndex <- as.integer(dataClassIndexString)
-    ```
-
 
 ##### 输出协方差/相关系数矩阵
 
-
-    ```r
     cov(rdataframe[, dataNumIndex])
-    ```
-
-    ```
+    
     ##              Sepal.Length Sepal.Width Petal.Length Petal.Width
     ## Sepal.Length      0.68569    -0.04243       1.2743      0.5163
     ## Sepal.Width      -0.04243     0.18998      -0.3297     -0.1216
     ## Petal.Length      1.27432    -0.32966       3.1163      1.2956
     ## Petal.Width       0.51627    -0.12164       1.2956      0.5810
-    ```
-
-    ```r
+    
     cor(rdataframe[, dataNumIndex])
-    ```
-
-    ```
+    
     ##              Sepal.Length Sepal.Width Petal.Length Petal.Width
     ## Sepal.Length       1.0000     -0.1176       0.8718      0.8179
     ## Sepal.Width       -0.1176      1.0000      -0.4284     -0.3661
     ## Petal.Length       0.8718     -0.4284       1.0000      0.9629
     ## Petal.Width        0.8179     -0.3661       0.9629      1.0000
-    ```
 
 
 ##### 输出散点/单变量直方/相关系数简图
 
-
-    ```r
     panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
         usr <- par("usr")
         on.exit(par(usr))
@@ -190,6 +178,7 @@ tags:
     }
     pairs(rdataframe[, dataNumIndex], upper.panel = panel.cor, diag.panel = panel.hist, 
         lower.panel = panel.smooth)
-    ```
 
-使用R par作图 看着没有GGPLOT2高富帅 啧啧![R_par1.png](\media\pic\2014-01-02\R_par1.png)
+默默觉得使用R par作图 看着没有GGPLOT2高富帅 啧啧。
+
+[R_par1.png](\media\pic\2014-01-02\R_par1.png)
