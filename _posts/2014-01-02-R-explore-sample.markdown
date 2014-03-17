@@ -181,9 +181,9 @@ tags:
 
 默默觉得使用R par作图 看着没有GGPLOT2高富帅 啧啧。
 
- *  List1
-     *  List2
-     *  List3
-         *  List3.1
+ *1  List1
+     *1.1  List2
+     *1.2  List3
+         *1.2.1  List3.1
 
 ![R_par1.png](\media\pic\2014-01-02\R_par1.png)
