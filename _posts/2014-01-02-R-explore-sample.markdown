@@ -181,4 +181,4 @@ tags:
 
 默默觉得使用R par作图 看着没有GGPLOT2高富帅 啧啧。
 
-[R_par1.png](\media\pic\2014-01-02\R_par1.png)
+![R_par1.png](\media\pic\2014-01-02\R_par1.png)
