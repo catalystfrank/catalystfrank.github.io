@@ -20,11 +20,12 @@ tags:
 ### 加载数据
 
 #### 传入训练数据文件与参数
-*   <em>rdataName</em>：加载文件名
-*   <em>rdataDelim</em>：分割符（不支持小数点与单双引号)，默认空格
-*   <em>rdataHaveColnames</em>：第一行是否带列名（T/F控制)
-*   <em>rdataExtColnames</em>：外部列名手动输入
-*   <em>rdataExtColDelim</em>：外部列名分割符，默认逗号
+ *  <em>rdataName</em>：加载文件名
+ *  <em>rdataDelim</em>：分割符（不支持小数点与单双引号)，默认空格
+ *  <em>rdataHaveColnames</em>：第一行是否带列名（T/F控制)
+ *  <em>rdataExtColnames</em>：外部列名手动输入
+ *  <em>rdataExtColDelim</em>：外部列名分割符，默认逗号
+
 
     rdataName <- "iris.dat"
     rdataDelim <- " "
