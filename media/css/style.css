@@ -24,12 +24,8 @@ body {
 ol, ul {
   list-style-position: inside; }
 
-ol.toc { padding: 0; margin-left: 1em; }
-ol.toc li { list-style-type: none; margin: 0; padding: 0; }
-
-
 li {
-  padding: .2em 0; }
+  padding: .2em 0; margin-left: 1em;}
 
 hr {
   width: 4em;
