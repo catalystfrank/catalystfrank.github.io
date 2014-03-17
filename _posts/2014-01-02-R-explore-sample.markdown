@@ -7,26 +7,15 @@ tags:
   - R
 ---
 
-### 设置工作路径，请改动
+### 设置工作路径
 
-    ```r
     setwd("blahblah/R/EXPLORE/")
-    ```
 
 ### 加载R Packages
 
-    ```r
     library(ggplot2)
     library(e1071)
-    ```
-
-    ```
-    ## Loading required package: class
-    ```
-
-    ```r
     library(colorspace)
-    ```
 
 ### 加载数据
 
@@ -37,13 +26,11 @@ tags:
 *   <em>rdataExtColnames</em>：外部列名手动输入
 *   <em>rdataExtColDelim</em>：外部列名分割符，默认逗号
 
-    ```r
     rdataName <- "iris.dat"
     rdataDelim <- " "
     rdataHaveColnames <- T
     rdataExtColnames <- "Sepal.Length,Sepal.Width,Petal.Length,Petal.Width,Species2"
     rdataExtColDelim <- ","
-    ```
 
 #### 加载数据
 
