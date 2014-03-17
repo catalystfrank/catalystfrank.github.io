@@ -19,13 +19,14 @@ tags:
 
 ### 加载数据
 
-#### 传入训练数据文件与参数
+#### 参数定义
  *  <em>rdataName</em>：加载文件名
  *  <em>rdataDelim</em>：分割符（不支持小数点与单双引号)，默认空格
  *  <em>rdataHaveColnames</em>：第一行是否带列名（T/F控制)
  *  <em>rdataExtColnames</em>：外部列名手动输入
  *  <em>rdataExtColDelim</em>：外部列名分割符，默认逗号
-
+ 
+#### 传入参数
 
     rdataName <- "iris.dat"
     rdataDelim <- " "
@@ -35,26 +36,22 @@ tags:
 
 #### 加载数据
 
-    ```r
     rdataExtColSplit <- strsplit(rdataExtColnames,rdataExtColDelim)[[1]]
     rdataframe<-read.table(rdataName,sep=rdataDelim,header=rdataHaveColnames,
     col.names=rdataExtColSplit, #该行在rdataHaveColnames=T时可选择不传参
     quote = "\"'",
     dec = "."
     )
-    ```
 
 #### 将数据顺序打乱
 
-    ```r
-    rdataframe <- rdataframe[sample(1:nrow(rdataframe), length(1:nrow(rdataframe))),1:ncol(rdataframe)]
-    ```
+    rdataframe <- rdataframe[sample(1:nrow(rdataframe),
+     length(1:nrow(rdataframe))),1:ncol(rdataframe)]
 
 ### 数据探索
 
-#### 数据描述
+#### 数据描述代码
 
-    ```r
     class_en2zh <- function(s) {
         if (s == "numeric") 
             result <- "数值型" else if (s == "factor") 
@@ -87,9 +84,9 @@ tags:
         "中位数", "均值", "3/4分位点", "最大值", "偏度", "峰度")
     names(data_summary_all) <- paste(names(datatype), datatype, sep = "_")
     data_summary_all
-    ```
 
-    ```
+#### 数据描述输出
+
     ##            Sepal.Length_数值型 Sepal.Width_数值型 Petal.Length_数值型
     ## 缺失值计数              0.0000             0.0000              0.0000
     ## 不同值计数             35.0000            23.0000             43.0000
@@ -112,7 +109,7 @@ tags:
     ## 最大值                 2.5000              NA
     ## 偏度                  -0.1009              NA
     ## 峰度                  -1.3582              NA
-    ```
+
 
 
 #### 数据可视化快照
