@@ -1,5 +1,5 @@
 ---
-title: 完美解决markdown+mathjax冲突
+title: 解决markdown+mathjax冲突
 layout: post
 guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d82
 tags:
@@ -72,4 +72,5 @@ Commit的博客文章如果语法没问题，几乎5秒以内新内容就可以�
 
 ### 其他注意事项
 
-\*号和成对的\_在markdown里面会转义的！一定要加反斜杠\\。
+星号\*和成对的下划线\_在markdown里面会发生转义，写Latex时一定要加反斜杠\\。
+2014年补丁：我现在发现这个方案处理不了Latex语法里面双反斜杠作为换行，&作为对齐标志的特殊字符。如果有大神看到改进方案望不吝赐教啊。
