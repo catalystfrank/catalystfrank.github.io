@@ -15,7 +15,8 @@ tags:
 
 github上面建立一个同名地址，yourname.github.io格式，开抄，还不懂的参考[github.com/catalystfrank](http://github.com/catalystfrank)
 
-抄完记得注册一个disqus授权博客评论哦。.name域名设置MyDNS 2个小时开启，开A级Url跳转，当然github也要加CNAME。两边联通测试，博客就能用啦。
+抄完记得注册一个disqus授权博客评论哦。.name域名设置MyDNS需要2个小时开启并且要开A级Url跳转，当然github也要加CNAME来保证各级跳转生效。两边联通测试，博客就能用了。
+Commit的博客文章如果语法没问题，几乎5秒以内新内容就可以生效。
 
 ### \_config.yml 需要改：
 
@@ -57,7 +58,8 @@ github上面建立一个同名地址，yourname.github.io格式，开抄，还�
     }
     });
     </script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
 ### style.css需要改：
 
