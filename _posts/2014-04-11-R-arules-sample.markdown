@@ -25,10 +25,10 @@ tags:
 #### 参数定义
 *   <em>rdataName</em>：加载文件名
 *   <em>rdataDelim</em>：分割符（不支持小数点与单双引号)，默认逗号
-*   <em>InfSupport</em>支持度最小值
-*   <em>InfConfd</em>置信度最小值
-*   <em>NRules</em>输出规则数
-*   <em>NVizRules1/2 </em>输出可视化规则数
+*   <em>InfSupport</em>：支持度最小值
+*   <em>InfConfd</em>：置信度最小值
+*   <em>NRules</em>：输出规则数
+*   <em>NVizRules1/2</em>：输出可视化规则数
  
 #### 传入参数
 
@@ -148,4 +148,4 @@ tags:
     
 ### 文件下载
 
-![Groceries.sparse](\media\pic\2014-04-11\Groceries.sparse)
+[Groceries.sparse](\media\pic\2014-04-11\Groceries.sparse)
