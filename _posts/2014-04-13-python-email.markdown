@@ -17,20 +17,24 @@ tags:
 
 ### 数据提取并执行邮件脚本
 
+以下为automail_with_attachment_from_mysql.sh内容：
+
     #!/bin/sh
-    #dbstat01n connectivity
+    #DB连接定义
     DB_HOST="..." #主机名
     DB_NAME="..." #数据库名
     DB_USER="..." #用户名
     DB_PASS="..." #密码
-    #Environment
+    #临时环境变量定义
     BIN_DIR="/usr/bin" #Linux都一样，可执行的路径，最好自己确认下
     PY_DIR="..." #python脚本与放置mysql查询输出txt的文件夹
-    #TODO
+    #执行MySQL查询，整理成CSV，并执行Python脚本
     $BIN_DIR/mysql -h $DB_HOST -u $DB_USER --password=$DB_PASS --database=$DB_NAME --execute="SET names utf8;你的查询语句写这里;" | sed 's/^//;s/[\t]/,/g;s/$//;s/\n//g' > $PY_DIR/weekly_amap.csv
-    $BIN_DIR/python $PY_DIR/weekly_amap_automail.py
+    $BIN_DIR/python $PY_DIR/automail.py
 
 ### 自动发送邮件主体
+
+以下为automail.py内容：
 
     # -*- coding: utf-8  -*-
     import smtplib
@@ -45,10 +49,16 @@ tags:
     CURRENTDAY=TODAY.strftime('%Y%m%d')
     def sendattachmail ():
         msg = MIMEMultipart()
-        att = MIMEText(codecs.open(r'这里写附件的绝对路径', 'rb','utf-8').read().encode("gb2312",'ignore'), 'base64', 'gb2312') #增加附件，用gb2312编码增加附件的小白友好度
+        
+        att = MIMEText(codecs.open(r'这里写附件1的绝对路径', 'rb','utf-8').read().encode("gb2312",'ignore'), 'base64', 'gb2312') #增加附件，用gb2312编码增加附件的小白友好度
         att['content-type'] = 'application/octet-stream'
-        att['content-disposition'] = 'attachment;filename="这里写附件文件名"'
+        att['content-disposition'] = 'attachment;filename="这里写附件1文件名"'
         msg.attach(att)
+    
+        att = MIMEText(codecs.open(r'这里写附件2的绝对路径', 'rb','utf-8').read().encode("gb2312",'ignore'), 'base64', 'gb2312')
+        att['content-type'] = 'application/octet-stream'
+        att['content-disposition'] = 'attachment;filename="这里写附件2文件名"'
+        msg.attach(att) #再粘贴一个文件
     
         content = (u'这是一封自动发送的邮件，附件内容为：xxx。请查收。').encode("gb2312") #用gb2312编码增加附件的小白友好度
         body = MIMEText(content,'plain','GBK')
@@ -86,6 +96,6 @@ tags:
 
 仿佛进入了vim界面，输入
 
-     0 7 * * 5 sh automail_with_attachment_from_mysql.sh
+     0 7 * * 5 sh /你sh脚本的路径/automail_with_attachment_from_mysql.sh
      
 这表示，每逢周五的早晨7点0分执行这个脚本。完成后按ESC，再按:wq保存。
