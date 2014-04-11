@@ -5,7 +5,9 @@ guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d88
 tags:
   - 关联规则
   - R
-  - Apriori Arules FP-Growth
+  - Apriori
+  - Arules
+  - FP-Growth
 ---
 
 ### 设置工作路径
